@@ -35,6 +35,7 @@ dto/             → Request body classes
 Example body:
 
 {
+<img width="1919" height="1020" alt="Screenshot 2025-12-10 222755" src="https://github.com/user-attachments/assets/46f639e2-065e-4e72-8e0f-50c36df3512a" />
   "partNumber": "P2001",
   "partName": "Hydraulic pump",
   "category": "Engine",
