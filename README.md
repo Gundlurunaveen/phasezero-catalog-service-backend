@@ -35,7 +35,7 @@ dto/             → Request body classes
 Example body:
 
 {
-<img width="1919" height="1020" alt="Screenshot 2025-12-10 222755" src="https://github.com/user-attachments/assets/46f639e2-065e-4e72-8e0f-50c36df3512a" />
+
   "partNumber": "P2001",
   "partName": "Hydraulic pump",
   "category": "Engine",
@@ -44,31 +44,33 @@ Example body:
 }
 
 
-👉 Get a product by part number
+<img width="1919" height="1020" alt="Screenshot 2025-12-10 222755" src="https://github.com/user-attachments/assets/46f639e2-065e-4e72-8e0f-50c36df3512a" />
 
-GET /products/{partNumber}
 
-👉 Update a product
+* Get a product by part number
+      GET /products/{partNumber}
 
+* Update a product
 PUT /products/{partNumber}
 
-👉 Delete a product
-
+* Delete a product
 DELETE /products/{partNumber}
 
-5. How to Test
+5. How to Test 
 Using Postman:
-
 Open Postman
-
 Choose the HTTP method
-
 Enter URL (for example: http://localhost:8080/products)
 
-For POST/PUT → Add JSON in “Body → raw → JSON”
+For POST/PUT → Add JSON in “Body → raw → JSON” then Send request
 
-Send request
+6. Notes
+Data will reset every time you restart the application (because it's in-memory).
+partName is always saved in lowercase.
+price and stock cannot be negative.
+partNumber must be unique.
 
-Using curl:
-
-Add a product:
+7. Future Improvements
+Add a real database (H2 / MySQL)
+Add Swagger API documentation
+Add search, filter, and sorting features
